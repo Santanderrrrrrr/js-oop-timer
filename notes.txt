@@ -1,0 +1,40 @@
+When using 'this'the valie may be different
+It may not be equal to the reference of the instance of the class but may 
+ be equal to the value of the element on which the event listener is added
+One can find out what 'this' is referring to by asking himself three questions:
+    1. Was the 'this'placed in an arrow function block?
+        if so, the value of this is equal to the value you'd get if you made a
+        console log of 'this' in the first line right before the function definition
+        Most times, the value would be 'window'
+    2. If you made the call using bind, call or apply":
+        These calls allow an object to use functions outside it's definition as if it was 
+        part of it's definition.
+        The value of this is often the value of the argument within the parameter definition
+            Call accepts an argument list
+            Apply accepts an array of arguments
+            Bind accepts an argument list much like call
+             only it allows you to make a future function call
+             rather than an immediate one as is the case with Call and Apply.
+    3. In all other cases, this would be the same as the object on the left side
+        of the function call's dot (.).
+
+We use bind in the function calls even though the functions fall in the class definition in order
+  to tie in the values declared as class properties within the constructor.
+  i.e. the functions don't have the values inside the constructor but need to make use of them in order to 
+  function. We then bind "this" in order to have access to the values in the constructor when calling our 
+  function.
+  I'm of the suspicion that if you use the bind once, you don't have to bind for subsequent uses in higher
+  points in the hierarchy.
+
+Using getters and setters is a proper way of achieving encapsulation in JS.
+  this is because the setters and getters are called much like object properties.
+  How? by simply assigning values and referring to the properties being got using "this"
+  This could keep future engineers from tampering with settings if they only go by assumption that
+  the properties being referred to are simple instance variables.
+
+Where to store data?
+    either inside the javascript code or
+    inside the dom
+
+we use parseFloat to parse the values of string type to integet/float type
+  we can also use parseInt only it returns a number without a decimal

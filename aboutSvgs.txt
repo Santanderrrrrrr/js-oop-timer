@@ -1,0 +1,39 @@
+SVG (Scalable Vector Graphics)
+    SVGs are html elements
+    when looking to show svg elements:
+        first add the element to your html file
+        you have to give a height and width
+        SVG's once added act like a canvas on which one can paint
+    SVG's top right corner is referred to as the origin
+        the x-axis increases from left to right and 
+        the y-axis increases from top to bottom
+    Onto the canvas, one can place different shapes including:
+        polygons( triangles, squares and rectangles included)
+        Ellipses ( circles included)
+        paths as well
+    The radius of a circle is set using r
+        in our instance, the cx and cy are the center points of our circle 
+    If there are parts of an shape is the SVG that are invisible, it means that they simply 
+      overlap the bounds of our SVG canvas
+    One can add as many shapes into an SVG as one pleases.
+
+    //Circles in svg's
+        The inner part oof the circle is calles the fill
+        the outer is called the stroke
+        There's a way to set the stroke styling using the stroke
+         -dasharray property which let's you pick out the size of the 
+         strokes and subsequently, the size of the space between the 
+         strokes
+         The stroke always begins at 3 o'clock
+         There's the stroke dash-offset which creates an additional space between the start point of the
+         stroke and the end point where the start and end meet
+         One can use the dashoffset in negative to get it moving in a clockwise direction
+        the transform property allows you to rotate the shape
+         notation: transform = "rotate(-90 100 100)
+          the above notation simply means we expect the shape to be rotated around the point
+          100 px from the origin, both on the x and y axis, 90 degrees anticlockwise allowing the 
+          dashoffset to begin at the 12 o'clock point.
+            unlike in the sizing, one cannot use percentage points to dictate the position of the
+            rotation center
+        It's important to note than JS calculations cannot be done on the shape if the proportions are listed in 
+         percentage points
